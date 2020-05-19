@@ -20,13 +20,13 @@
             <th class="col-">Carne</th>
             <th class="col-">Carrera</th>
             </thead>
-            <th:block th:each="estudiante, row:${estudiantes}">
+            <th:block th:each="estudiantes, row:${estudiantes}">
                 <tr style="background: #e1f5fe;">
-                    <th th:text="${estudiante.codigoEstudiante}"></th>
-                    <th th:text="${estudiante.nombre}"></th>
-                    <th th:text="${estudiante.apellido}"></th>
-                    <th th:text="${estudiante.carne}"></th>
-                    <th th:text="${estudiante.carrera}"></th>
+                    <th th:text="${estudiantes.codigoEstudiante}"></th>
+                    <th th:text="${estudiantes.nombre}"></th>
+                    <th th:text="${estudiantes.apellido}"></th>
+                    <th th:text="${estudiantes.carne}"></th>
+                    <th th:text="${estudiantes.carrera}"></th>
                 </tr>
             </th:block>
         </table>

@@ -46,13 +46,15 @@ public class MainController {
     @RequestMapping("/procesado")
     public ModelAndView procesForm(@Valid @ModelAttribute Estudiante estudiante, BindingResult result){
         ModelAndView mav = new ModelAndView();
-        if(result.hasErrors()){
-            mav.setViewName("index");
-        }else {
-            estudianteDAO.insert(estudiante);
+        if(!result.hasErrors()) {
+            try {
+                estudianteDAO.insert(estudiante);
+            }catch(Exception e) {
+                e.printStackTrace();
+            }
             mav.addObject("estudiante", new Estudiante());
-            mav.setViewName("index");
         }
+        mav.setViewName("index");
         return mav;
     }
 }

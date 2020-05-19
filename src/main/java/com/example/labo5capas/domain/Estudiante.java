@@ -12,24 +12,24 @@ public class Estudiante {
     @Column(name = "c_usuario")
     public Integer codigoEstudiante;
 
-    @Size(message = "El nombre no debe tener mas de 15 caracteres", max=15)
-    @NotEmpty(message = "Este campo no puede estar vacio")
     @Column(name = "nombre")
+    @Size(message = "El nombre no debe tener mas de 50 caracteres", max=50)
+    @NotEmpty(message = "Este campo no puede estar vacio")
     public String Nombre;
 
-    @Size(message = "El apellido no debe tener mas de 15 caracteres", max=15)
-    @NotEmpty(message = "Este campo no puede estar vacio")
     @Column(name = "apellido")
+    @Size(message = "El apellido no debe tener mas de 50 caracteres", max=50)
+    @NotEmpty(message = "Este campo no puede estar vacio")
     public String Apellido;
 
-    @Size(min=1, max=12, message = "El campo Carne debe tener 9 caracteres")
-    @NotNull(message = "El campo no pede estar vacio")
     @Column(name = "carne")
-    public Integer Carne;
+    @Size(message = "El campo Carne debe tener 10 caracteres", max=10)
+    @NotNull(message = "El campo no pede estar vacio")
+    public String Carne;
 
-    @Size(message = "El nombre de Carrera no debe tener mas de 30 caracteres", max=30)
-    @NotEmpty(message = "Este campo no puede estar vacio")
     @Column(name = "carrera")
+    @Size(message = "El nombre de la carrera no debe tener mas de 100 caracteres", max=100)
+    @NotEmpty(message = "Este campo no puede estar vacio")
     public String Carrera;
 
     public Estudiante() {
@@ -59,11 +59,11 @@ public class Estudiante {
         Apellido = apellido;
     }
 
-    public Integer getCarne() {
+    public String getCarne() {
         return Carne;
     }
 
-    public void setCarne(Integer carne) {
+    public void setCarne(String carne) {
         Carne = carne;
     }
 

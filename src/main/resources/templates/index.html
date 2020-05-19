@@ -12,27 +12,27 @@
                 <h1 class="col-12 justify-content-center">Ingresa un Nuevo Estudiante</h1>
             </div>
             <form class="col-12" method="post" th:object="${estudiante}" th:action="@{/procesado}">
-                <div class="row m-3">
-                    <label class="col-3 text-center">Nombre</label>
-                    <input class="col-6" type="text" th:field="*{nombre}" placeholder="Ingrese nombre">
-                    <span class="col-12" th:errors="*{nombre}"></span>
+                <div class="form-group row m-3">
+                    <label class="col-2 text-center">Nombre</label>
+                    <input class="col-3" type="text" th:field="*{nombre}" placeholder="Ingrese nombre">
+                    <span class="col-3" th:errors="*{nombre}" style="color: #FF0000"></span>
                 </div>
-                <div class="row m-3">
-                    <label class="col-3 text-center">Apellido</label>
-                    <input class="col-6" type="text" th:field="*{apellido}" placeholder="Ingrese apellido">
-                    <span class="col-12" th:errors="*{apellido}"></span>
+                <div class="form-group row m-3">
+                    <label class="col-2 text-center">Apellido</label>
+                    <input class="col-3" type="text" th:field="*{apellido}" placeholder="Ingrese apellido">
+                    <span class="col-3" th:errors="*{apellido}" style="color: #FF0000"></span>
                 </div>
-                <div class="row m-3">
-                    <label class="col-3 text-center">Carne</label>
-                    <input class="col-6" type="number" th:field="*{carne}" placeholder="Ingrese nombre">
-                    <span class="col-12" th:errors="*{carne}"></span>
+                <div class="form-group row m-3">
+                    <label class="col-2 text-center">Carne</label>
+                    <input class="col-3" type="number" th:field="*{carne}" placeholder="Ingrese el carne">
+                    <span class="col-3" th:errors="*{carne}" style="color: #FF0000"></span>
                 </div>
-                <div class="row m-3">
-                    <label class="col-3 text-center">Carrera</label>
-                    <input class="col-6" type="text" th:field="*{carrera}" placeholder="Ingrese nombre">
-                    <span class="col-12" th:errors="*{carrera}"></span>
+                <div class="form-group row m-3">
+                    <label class="col-2 text-center">Carrera</label>
+                    <input class="col-3" type="text" th:field="*{carrera}" placeholder="Ingrese la carrera">
+                    <span class="col-3" th:errors="*{carrera}" style="color: #FF0000"></span>
                 </div>
-                <div class="row justify-content-center m-3">
+                <div class="form-group row justify-content-center m-3">
                     <div class="col-2 m-3">
                         <input class="btn-success" type="submit" value="Agregar Estudiante">
                     </div>
